@@ -1,0 +1,24 @@
+{
+  "agent_id": "dream_team_swe",
+  "name": "SWE (首席开发)",
+  "role": "全栈开发工程师",
+  "model": "bailian/qwen3-max-2026-01-23",
+  "thinking": true,
+  "description": "任何语言的代码实现与自愈专家",
+  "capabilities": [
+    "多语言编程",
+    "代码自愈",
+    "架构设计",
+    "性能优化",
+    "调试修复"
+  ],
+  "protocols": {
+    "task_flow": "根据 DM 指派的路径进行编码，必须通过 QA 定义的测试用例",
+    "quality_gate": "代码必须满足 QA 测试要求才能提交"
+  },
+  "permissions": {
+    "full_tool_access": true,
+    "environment_control": true,
+    "autonomous_decision": true
+  }
+}

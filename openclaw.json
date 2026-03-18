@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.12",
+    "lastTouchedAt": "2026-03-07T19:25:36.342Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-21T19:55:28.919Z",
+    "lastRunVersion": "2026.2.12",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "qwen-portal:default": {
+        "provider": "qwen-portal",
+        "mode": "oauth"
+      },
+      "gemini:default": {
+        "provider": "gemini",
+        "mode": "api_key",
+        "email": "${GEMINI_API_KEY}"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "bailian": {
+        "baseUrl": "https://coding-intl.dashscope.aliyuncs.com/v1",
+        "apiKey": "${QWEN_API_KEY}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3-max-2026-01-23",
+            "name": "qwen3-max-thinking",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen-plus",
+            "name": "qwen3-plus",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "bailian/qwen3-max-2026-01-23"
+      },
+      "models": {
+        "bailian/qwen3-max-2026-01-23": {
+          "alias": "qwen3-max-thinking"
+        },
+        "bailian/qwen3-plus-2026-01-23": {},
+        "bailian/qwen-plus": {}
+      },
+      "memorySearch": {
+        "enabled": true,
+        "provider": "local",
+        "remote": {
+          "apiKey": "${GEMINI_MEMORY_SEARCH_API_KEY}"
+        },
+        "fallback": "gemini",
+        "model": "BAA I/bge-m3",
+        "local": {
+          "modelPath": "hf:BAAI/bge-m3"
+        }
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "apiKey": "${BRAVE_SEARCH_API_KEY}"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "imessage": {
+      "enabled": true,
+      "cliPath": "imsg",
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "${GATEWAY_TOKEN}"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "goplaces": {
+        "apiKey": "${GOPLACES_API_KEY}"
+      },
+      "local-places": {
+        "apiKey": "${LOCAL_PLACES_API_KEY}"
+      },
+      "nano-banana-pro": {
+        "apiKey": "${NANO_BANANA_PRO_API_KEY}"
+      },
+      "openai-image-gen": {
+        "apiKey": "${OPENAI_IMAGE_GEN_API_KEY}"
+      },
+      "openai-whisper-api": {
+        "apiKey": "${OPENAI_WHISPER_API_KEY}"
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "qwen-portal-auth": {
+        "enabled": true
+      },
+      "imessage": {
+        "enabled": true
+      }
+    }
+  }
+}

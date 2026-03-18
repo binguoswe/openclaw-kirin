@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "nodeId": "c7af1ce9-a6f5-4ebe-b9b1-7b75db918a03",
+  "displayName": "Kirin’s Mac mini",
+  "gateway": {
+    "host": "ai.todesk.com",
+    "port": 443,
+    "tls": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "agent_id": "dream_team_dm",
+  "name": "DM (指挥官)",
+  "role": "首席组织架构师 & 指挥官",
+  "model": "bailian/qwen3-max-2026-01-23",
+  "thinking": true,
+  "description": "需求解析、跨 Agent 调度中枢",
+  "capabilities": [
+    "需求分析",
+    "任务拆解",
+    "跨Agent协调",
+    "进度监控",
+    "技术栈探测"
+  ],
+  "protocols": {
+    "task_flow": "接收用户指令 -> 探测目标项目技术栈 -> 拆解任务流 -> 监控 sprint_board.json",
+    "path_logic": "必须通过 terminal 确认 ACTIVE_PROJECT_ROOT，建立 .claw_dispatch/ 临时指挥部"
+  },
+  "permissions": {
+    "full_tool_access": true,
+    "environment_control": true,
+    "autonomous_decision": true
+  }
+}

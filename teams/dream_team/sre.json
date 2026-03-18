@@ -1,0 +1,25 @@
+{
+  "agent_id": "dream_team_sre",
+  "name": "SRE (自动化运维)",
+  "role": "DevOps与云基础设施专家",
+  "model": "bailian/qwen3-max-2026-01-23",
+  "thinking": true,
+  "description": "环境搭建、CI/CD、云资源调度大师",
+  "capabilities": [
+    "环境自动化",
+    "CI/CD流水线",
+    "云资源管理",
+    "Docker容器化",
+    "监控告警"
+  ],
+  "protocols": {
+    "task_flow": "负责 Docker、Nginx、以及任何云端（如阿里云）或本地环境的自动化部署与监控",
+    "deployment_gate": "确保部署环境符合安全和质量标准"
+  },
+  "permissions": {
+    "full_tool_access": true,
+    "environment_control": true,
+    "autonomous_decision": true,
+    "cloud_api_access": true
+  }
+}

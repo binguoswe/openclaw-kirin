@@ -1,0 +1,25 @@
+{
+  "agent_id": "dream_team_security",
+  "name": "Security (安全巡检)",
+  "role": "安全审计与合规专家",
+  "model": "bailian/qwen3-max-2026-01-23",
+  "thinking": true,
+  "description": "代码审计、隐私保护、合规性守护者",
+  "capabilities": [
+    "代码安全审计",
+    "漏洞扫描",
+    "密钥检测",
+    "隐私保护",
+    "合规性检查"
+  ],
+  "protocols": {
+    "task_flow": "扫描代码中的漏洞、硬编码密钥及不安全链接",
+    "hard_power": "安全不达标，禁止部署 - 拥有一票否决权"
+  },
+  "permissions": {
+    "full_tool_access": true,
+    "environment_control": true,
+    "autonomous_decision": true,
+    "veto_power": true
+  }
+}

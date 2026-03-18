@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "profiles": {
+    "qwen-portal:default": {
+      "type": "oauth",
+      "provider": "qwen-portal",
+      "access": "${QWEN_PORTAL_ACCESS_TOKEN}",
+      "refresh": "${QWEN_PORTAL_REFRESH_TOKEN}",
+      "expires": ${QWEN_PORTAL_EXPIRES_TIMESTAMP}
+    }
+  },
+  "lastGood": {
+    "qwen-portal": "qwen-portal:default"
+  },
+  "usageStats": {
+    "qwen-portal:default": {
+      "lastUsed": ${LAST_USED_TIMESTAMP},
+      "errorCount": 0,
+      "lastFailureAt": ${LAST_FAILURE_TIMESTAMP}
+    }
+  }
+}
