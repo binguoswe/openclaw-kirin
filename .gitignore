@@ -1,0 +1,78 @@
+# Sensitive configuration files
+.env
+.env.local
+.env.example
+.openclaw/openclaw.json
+config.json
+secrets.json
+credentials.json
+mcp.json
+settings.json
+
+# API keys and tokens
+*.key
+*.token
+*.secret
+
+# Python virtual environments
+venv/
+env/
+.venv/
+embedding_env/
+
+# Python cache and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+ipynb_checkpoints/
+
+# Node.js dependencies
+node_modules/
+
+# Log files
+*.log
+logs/
+*.err
+*.out
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.vscode
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# OpenClaw specific
+~/.openclaw/
+.openclaw/
+*.openclaw
+
+# Project specific
+Backups/
+*.tar.gz
+*.zip
+
+# Git metadata
+.git/
+
+# Cache directories
+.cache/
+.tmp/
